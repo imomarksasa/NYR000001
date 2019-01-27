@@ -47,7 +47,7 @@ client.on('message', message => {
       if(!reason) return message.reply(`**Please provide a reason**`)
     let findchannel = (message.guild.channels.find('name', `${reportjson[message.guild.id].channel}`))
     if(!findchannel) return message.reply(`Error 404: The report Channel Cant Find Or Not Set To Set The report Channel Type: ${prefix}setReport`)
-    message.channel.send(`تـم رفع الشكوى الى الادارة سيتم مراجعتها قريبا `)
+    message.channel.send(`تـم رفع الشكوى الى الادارة سيتم مراجعتها قريبا ✅ `)
     let sugembed = new Discord.RichEmbed()
     .setTitle('شكوى جديدة !')
     .addField('شكوى من قبل:', `${message.author}`)
