@@ -240,7 +240,7 @@ client.on('message', message => {
  
 });
 
-NYR.on('message', function(msg) {
+client.on('message', function(msg) {
 if(msg.content.startsWith (prefix  + 'info')) {
  let embed = new Discord.RichEmbed()
  .setColor('RANDOM')
