@@ -7,6 +7,35 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
+
+if(cmd ==="+report"){
+        let wUser = message.guild.member (message.mentions.users.first())  message.guild.members.get(args[0]);
+          if(!wUser) return message.reply("يجب ان تمنشن شخص اول")
+    let reason = args.join(" ").slice(22);
+
+message.channel.send("تم ارسال  الشكوى  الى الادارة   ")
+
+   let embed = new Discord.RichEmbed()
+          .setColor('RANDOM')
+  .addField("الشكوى على",${wUser} with id ${wUser.id})
+  .addField("تم ارسال الكوى من قبل",${message.author} with id ${message.author.id})
+  .addField("الرووم",message.channel)
+  .addField("الوقت",message.createdAt)
+  .addField("السبب",reason)
+
+
+  let warnchannel = message.guild.channels.find(name,"reports")
+  if(!warnchannel) return message.reply("لا يجود الشات ")
+
+  message.delete().catch(O_o=>{})
+  warnchannel.send(embed);
+
+
+  }
+
+
+
+
 client.on('message',async message => {
   if(message.channel.type === 'dm') return;
   if(message.author.bot) return;
