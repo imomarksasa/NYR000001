@@ -18,7 +18,7 @@ client.on('guildMemberAdd', member => {
  
   if (!channel) return;
 
-  channel.send(`** WelCome To NewYoRk ,** :heart: :sparkles: ${member}`);
+  channel.send(`${member}** WelCome To NewYoRk ,** :heart: :sparkles:`);
 });
 
 
